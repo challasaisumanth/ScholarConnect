@@ -1,119 +1,154 @@
-/* Admin Dashboard Container */
-.admin-dashboard-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #f5f8fa;
-  padding: 20px;
+/* AdminDashboard.css */
+
+:root {
+  --primary-color: #4b79a1; /* Gradient start */
+  --secondary-color: #283e51; /* Gradient end */
+  --accent-color: #f3a683;
+  --background-color: skyblue; /* Sky blue background color */
+  --card-bg: #ffffff;
+  --card-shadow: rgba(0, 0, 0, 0.1);
 }
 
-.admin-dashboard-content {
-  background-color: #fff;
-  padding: 30px;
-  width: 80%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.admin-dashboard-title {
-  font-size: 2rem;
-  margin-bottom: 10px;
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('C:/Users/LENOVO/Downloads/photo_2024-12-08_03-10-22.jpg'); /* Background image */
+  background-size: cover; /* Ensure the image covers the whole area */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent the image from repeating */
+  margin: 0;
+  padding: 0;
   color: #333;
 }
 
-.admin-dashboard-subtitle {
+.admin-dashboard-container {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.4); /* 40% opacity to make the content more transparent */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--card-shadow);
+}
+
+.admin-dashboard-header {
+  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px var(--card-shadow);
+}
+
+.admin-dashboard-header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.admin-dashboard-header p {
+  margin: 5px 0 0;
   font-size: 1.2rem;
-  color: #555;
+}
+
+.scholarship-list-section,
+.add-scholarship-section,
+.edit-scholarship-section {
+  margin-top: 30px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5); /* 50% opacity to make the cards more transparent */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px var(--card-shadow);
+}
+
+.scholarship-list-section h2,
+.add-scholarship-section h2,
+.edit-scholarship-section h2 {
+  color: var(--primary-color);
   margin-bottom: 20px;
 }
 
-.scholarship-list {
-  margin-bottom: 30px;
-}
-
 .scholarship-card {
-  background-color: #f9f9f9;
-  padding: 20px;
-  margin: 10px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.scholarship-card h3 {
-  font-size: 1.5rem;
-  margin-bottom: 10px;
-}
-
-.scholarship-actions {
   display: flex;
-  gap: 10px;
-}
-
-.admin-menu-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.admin-menu-button:hover {
-  background-color: #0056b3;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
-}
-
-.add-scholarship {
-  margin-top: 40px;
-}
-
-.add-scholarship input,
-.add-scholarship textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border-radius: 8px;
-  border: 1px solid #ddd;
-}
-
-.add-scholarship button {
-  background-color: #28a745;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  font-size: 1rem;
-  transition: background-color 0.3s ease;
-}
-
-.add-scholarship button:hover {
-  background-color: #218838;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-}
-
-.modal-content {
-  background: #fff;
-  padding: 20px;
+  background: var(--card-bg);
+  margin-bottom: 15px;
+  padding: 15px;
   border-radius: 8px;
-  width: 90%;
-  max-width: 500px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 6px var(--card-shadow);
 }
 
+.card-content h3 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.card-content p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+
+.card-actions button {
+  margin-left: 10px;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-button {
+  background: var(--accent-color);
+  color: #fff;
+}
+
+.delete-button {
+  background: #eb5757;
+  color: #fff;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+  transform: scale(1.05);
+}
+
+.scholarship-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.scholarship-form input,
+.scholarship-form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.scholarship-form input:focus,
+.scholarship-form textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 4px var(--primary-color);
+}
+
+.scholarship-form button {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.scholarship-form button:hover {
+  background: var(--secondary-color);
+  transform: scale(1.05);
+}
+
+.amount {
+  font-weight: bold;
+  color: var(--accent-color);
+}

@@ -4,89 +4,83 @@ import './styles/HomePage.css';
 
 const HomePage = () => {
   return (
-    <div className="home-container">
-      {/* Hero Section */}
-      <section className="hero">
-        <div className="hero-content">
-          <h1>Empower Your Future with Scholarships</h1>
-          <p>Unlock the door to educational opportunities with our curated list of scholarships.</p>
+    <div className="home-wrapper">
+      {/* Navigation Bar */}
+      <header className="header">
+        <div className="logo">
+          <h1>ScholarConnect</h1>
+        </div>
+        <nav className="nav-links">
+          <Link to="/login" className="nav-item">Sign In</Link>
+          <Link to="/register" className="nav-item">Get Started</Link>
+        </nav>
+      </header>
+
+      {/* Main Section with Intro */}
+      <section className="main-section">
+        <div className="main-content">
+          <h2>Discover Your Future with Scholarships</h2>
+          <p>We simplify your journey to find and apply for scholarships suited to your needs. Join our platform and get started!</p>
           <div className="cta-buttons">
-            <Link to="/login" className="btn login-btn">Sign In</Link>
-            <Link to="/register" className="btn register-btn">Join Us</Link>
+            <Link to="/register" className="cta-btn">Register Now</Link>
+            <Link to="/login" className="cta-btn">Log In</Link>
           </div>
+        </div>
+        <div className="main-image">
+          <img src="scholarship-image.png" alt="Scholarships" />
         </div>
       </section>
 
       {/* Features Section */}
       <section className="features">
-        <div className="feature">
-          <img src="scholarship.svg" alt="Scholarships" className="feature-icon"/>
-          <h2>Discover Scholarships</h2>
-          <p>Access a wide range of scholarships tailored to your needs.</p>
+        <div className="feature-card">
+          <h3>Easy Search</h3>
+          <p>Find scholarships based on your profile, field of study, and location.</p>
         </div>
-        <div className="feature">
-          <img src="register.svg" alt="Register" className="feature-icon"/>
-          <h2>Quick Registration</h2>
-          <p>Get started in minutes and begin applying for financial aid opportunities.</p>
+        <div className="feature-card">
+          <h3>Custom Recommendations</h3>
+          <p>Get personalized scholarship recommendations based on your achievements and goals.</p>
         </div>
-        <div className="feature">
-          <img src="track.svg" alt="Track" className="feature-icon"/>
-          <h2>Track Applications</h2>
-          <p>Stay updated on your scholarship applications and their status.</p>
+        <div className="feature-card">
+          <h3>Track Your Applications</h3>
+          <p>Keep track of all your applications and deadlines from one platform.</p>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="benefits">
+        <div className="benefit-card">
+          <h3>Wide Range of Scholarships</h3>
+          <p>Access thousands of scholarships for undergraduates, graduates, and professionals worldwide.</p>
+        </div>
+        <div className="benefit-card">
+          <h3>Comprehensive Support</h3>
+          <p>Get help and guidance on how to apply, improve your chances, and succeed in the application process.</p>
+        </div>
+        <div className="benefit-card">
+          <h3>Fast & Secure</h3>
+          <p>Our platform ensures a seamless and secure application process with instant updates and alerts.</p>
         </div>
       </section>
 
       {/* Testimonials Section */}
       <section className="testimonials">
-        <h2>What Our Students Say</h2>
-        <div className="testimonial-card">
-          <p>“This platform helped me find the perfect scholarship to fund my education. It's super easy to use!”</p>
-          <h4>- John Doe, Scholarship Recipient</h4>
+        <h2>What Students Say</h2>
+        <div className="testimonial-cards">
+          <div className="testimonial-card">
+            <p>“ScholarConnect helped me find scholarships that matched my profile. It was so easy to apply!”</p>
+            <h4>- Sarah, Scholarship Recipient</h4>
+          </div>
+          <div className="testimonial-card">
+            <p>“I received personalized recommendations, which made finding scholarships much less overwhelming.”</p>
+            <h4>- John, Student</h4>
+          </div>
         </div>
-        <div className="testimonial-card">
-          <p>“I managed to apply to multiple scholarships in just a few clicks. Amazing experience!”</p>
-          <h4>- Jane Smith, University Student</h4>
-        </div>
-      </section>
-
-      {/* Partners Section */}
-      <section className="partners">
-        <h2>Our Partners</h2>
-        <div className="partner-logos">
-          <img src="partner1.svg" alt="Partner 1" className="partner-logo"/>
-          <img src="partner2.svg" alt="Partner 2" className="partner-logo"/>
-          <img src="partner3.svg" alt="Partner 3" className="partner-logo"/>
-          <img src="partner4.svg" alt="Partner 4" className="partner-logo"/>
-        </div>
-      </section>
-
-      {/* FAQ Section */}
-      <section className="faq">
-        <h2>Frequently Asked Questions</h2>
-        <div className="faq-item">
-          <h3>How do I apply for a scholarship?</h3>
-          <p>You can browse through available scholarships and apply by filling out the application form online.</p>
-        </div>
-        <div className="faq-item">
-          <h3>What do I need to register?</h3>
-          <p>All you need is your email address, some basic personal information, and your academic details.</p>
-        </div>
-      </section>
-
-      {/* Call to Action Section */}
-      <section className="cta-section">
-        <h2>Ready to Start Your Scholarship Journey?</h2>
-        <p>Sign up today and gain access to hundreds of scholarships tailored just for you.</p>
-        <Link to="/register" className="btn large-btn">Register Now</Link>
       </section>
 
       {/* Footer */}
-      <footer className="home-footer">
-        <p>© 2024 Scholarship Portal | Empowering Education</p>
-        <div className="footer-links">
-          <Link to="/about">About</Link>
-          <Link to="/contact">Contact Us</Link>
-        </div>
+      <footer className="footer">
+        <p>© 2024 ScholarConnect | All Rights Reserved</p>
       </footer>
     </div>
   );

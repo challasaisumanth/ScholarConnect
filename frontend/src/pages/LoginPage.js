@@ -15,14 +15,14 @@ const LoginPage = () => {
         email,
         password,
       });
-  
+
       // Alert the success message
       alert(response.data.message);
-  
+
       // Check if the response is successful and role is present
       if (response.status === 200) {
         const userRole = response.data.role;
-  
+
         // Redirect based on the role
         if (userRole === "Student") {
           navigate('/Student-Dashboard');
@@ -35,13 +35,13 @@ const LoginPage = () => {
       console.error('Login error:', error);
     }
   };
-  
 
   return (
     <div className="login-container">
-      <div className="login-card">
-        <h2>Login to Your Account</h2>
-        <p>Access your scholarship portal by logging in below.</p>
+      <div className="login-content">
+        <h2 className="login-title">Welcome Back!</h2>
+        <p className="login-subtitle">Log in to access your scholarship portal.</p>
+
         <div className="input-group">
           <input
             type="email"
@@ -50,6 +50,7 @@ const LoginPage = () => {
             onChange={(e) => setEmail(e.target.value)}
           />
         </div>
+        
         <div className="input-group">
           <input
             type="password"
@@ -58,7 +59,9 @@ const LoginPage = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
         </div>
+
         <button onClick={handleLogin} className="login-btn">Login</button>
+
         <p className="signup-link">
           Don't have an account? <Link to="/register">Sign up here</Link>.
         </p>
